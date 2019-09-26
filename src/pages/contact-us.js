@@ -8,7 +8,7 @@ import NetlifyForm from "../components/netlify-form";
 const ContactUs = () => (
   <Layout>
     <SEO title="Contact Us" />
-    <NetlifyForm>
+    <NetlifyForm name="Contact Us">
     <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
