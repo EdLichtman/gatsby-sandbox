@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Eddie's Test Site`,
-    description: `This is Eddie's test page.`,
-    author: `@gatsbyjs`,
+    title: `D&D 5e Tools`,
+    description: `A site devoted to tooling for your D&D 5e campaigns.`,
+    author: `@elichtman`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
