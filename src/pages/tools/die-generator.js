@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import DieGenerator from "../../components/die-generator"
+import DieGenerator from "../../components/die-generator/die-generator"
 
 const DieGeneratorPage = () => (
     <>

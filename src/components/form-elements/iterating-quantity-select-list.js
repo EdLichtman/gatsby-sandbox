@@ -2,14 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import SelectListOption from "./select-list-option"
 
-const IteratingQuantitySelectList = ({ name, minQuantity, maxQuantity }) => {
-  var minimum = !!minQuantity ? minQuantity : 1
-  var totalIterations = maxQuantity + 1 - minimum
+const IteratingQuantitySelectList = ({ name, onChange, minQuantity = 1, maxQuantity }) => {
+  var totalIterations = maxQuantity + 1 - minQuantity
 
   return (
-    <select name={name}>
+    <select onChange={onChange} name={name}>
       {Array.from(Array(totalIterations).keys()).map(function(elem, index) {
-        var quantity = (elem + minimum).toString()
+        var quantity = (elem + minQuantity).toString()
         return (
           <React.Fragment key={index}>
             <SelectListOption
@@ -26,6 +25,7 @@ const IteratingQuantitySelectList = ({ name, minQuantity, maxQuantity }) => {
 
 IteratingQuantitySelectList.propTypes = {
   name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   minQuantity: PropTypes.number,
   maxQuantity: PropTypes.number.isRequired,
 }
